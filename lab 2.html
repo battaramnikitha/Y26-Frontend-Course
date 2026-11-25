@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital services, doctors and patient appointment booking">
+    <title>City Care Hospital</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            color: darkblue;
+            margin: 0;
+        }
+
+        header {
+            background-color: rgb(0, 139, 116);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: rgb(128, 0, 6);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        article {
+            background-color: lightyellow;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid gray;
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>City Care Hospital</h1>
+    <p>Your Health, Our Priority</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#appointment">Appointment</a>
+</nav>
+
+<main>
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <article>
+            <h3>Cardiology</h3>
+            <p>Heart health and cardiac care services.</p>
+        </article>
+
+        <article>
+            <h3>Neurology</h3>
+            <p>Treatment and care for neurological conditions.</p>
+        </article>
+
+        <article>
+            <h3>General Medicine</h3>
+            <p>Medical consultation and general health services.</p>
+        </article>
+    </section>
+
+    <section id="doctors">
+        <h2>Our Doctors</h2>
+
+        <article>
+            <h3>Dr. Ananya Sharma</h3>
+            <p>Specialization: Cardiology</p>
+        </article>
+
+        <article>
+            <h3>Dr. Rahul Verma</h3>
+            <p>Specialization: General Medicine</p>
+        </article>
+    </section>
+
+    <section id="appointment">
+        <h2>Patient Appointment Form</h2>
+
+        <form action="#" method="get">
+
+            <label for="patientname">Patient Name:</label>
+            <input type="text" id="patientname" name="patientname"
+                   placeholder="Enter patient name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10}"
+                   placeholder="Enter 10 digit number" required>
+
+            <label for="department">Select Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Choose department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="general">General Medicine</option>
+            </select>
+
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Symptoms or Message:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Describe your symptoms"></textarea>
+
+            <button type="submit">Book Appointment</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 City Care Hospital. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

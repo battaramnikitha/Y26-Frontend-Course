@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: 10% 80% 10%;
+            height: 98vh;
+            gap: 4px;
+        }
+
+        .navigation {
+            background-color: lightblue;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            gap: 4px;
+        }
+
+        .left {
+            background-color: bisque;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .right {
+            background-color: lightgreen;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: lavender;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        h3 {
+            margin: 5px 0 12px;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Top Frame -->
+        <div class="navigation">
+            <b>HOME | DESTINATIONS | PACKAGES | BOOKINGS | CONTACT</b>
+            <div>Travel Navigation</div>
+        </div>
+
+        <!-- Middle Frame -->
+        <div class="main">
+
+            <!-- Left Frame -->
+            <div class="left">
+                <h3>Popular Places</h3>
+                <p>Goa</p>
+                <p>Manali</p>
+                <p>Kerala</p>
+                <p>Jaipur</p>
+                <p>Left Frame</p>
+            </div>
+
+            <!-- Right Frame -->
+            <div class="right">
+                <h3>Explore the World</h3>
+                <p>Discover beautiful destinations</p>
+                <p>Enjoy exciting holiday packages</p>
+                <p>Plan your next adventure with us</p>
+                <p>Right Frame</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Frame -->
+        <div class="footer">
+            <b>Happy Journey!</b>
+            <div>Footer – Travel Website</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

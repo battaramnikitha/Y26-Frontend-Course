@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University student activities and event registration portal">
+    <title>Student Activity Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            color: #222;
+        }
+
+        header {
+            background-color: #802643;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #172554;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        aside {
+            background-color: #e8edff;
+            padding: 15px;
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #263b80;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>University Student Activity Portal</h1>
+    <p>Explore, Participate and Learn</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#register">Register</a>
+</nav>
+
+<main>
+
+    <section id="home">
+        <h2>Welcome Students</h2>
+        <p>
+            Discover university events, workshops, competitions
+            and activities. Participate and develop your skills.
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+
+        <article>
+            <h3>Technical Workshop</h3>
+            <p>Date: 25 November 2026</p>
+            <p>Learn programming and emerging technologies.</p>
+        </article>
+
+        <article>
+            <h3>Cultural Fest</h3>
+            <p>Date: 28 November 2026</p>
+            <p>Participate in music, dance and cultural activities.</p>
+        </article>
+
+        <article>
+            <h3>Sports Competition</h3>
+            <p>Date: 30 November 2026</p>
+            <p>Show your talent in various sports events.</p>
+        </article>
+    </section>
+
+    <aside>
+        <h2>Announcement</h2>
+        <p>Registration is open for all upcoming university events.</p>
+    </aside>
+
+    <section id="register">
+        <h2>Student Registration Form</h2>
+
+        <form action="#" method="get">
+
+            <label for="studentname">Student Name:</label>
+            <input type="text" id="studentname" name="studentname"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select your branch</option>
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="mechanical">Mechanical</option>
+            </select>
+
+            <fieldset>
+                <legend>Year of Study</legend>
+
+                <label>
+                    <input type="radio" name="year" value="1" required>
+                    First Year
+                </label>
+
+                <label>
+                    <input type="radio" name="year" value="2">
+                    Second Year
+                </label>
+
+                <label>
+                    <input type="radio" name="year" value="3">
+                    Third Year
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Activities</legend>
+
+                <label>
+                    <input type="checkbox" name="activity" value="technical">
+                    Technical Workshop
+                </label>
+
+                <label>
+                    <input type="checkbox" name="activity" value="cultural">
+                    Cultural Fest
+                </label>
+
+                <label>
+                    <input type="checkbox" name="activity" value="sports">
+                    Sports
+                </label>
+            </fieldset>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Enter your interests"></textarea>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 University Student Activity Portal</p>
+</footer>
+
+</body>
+</html>

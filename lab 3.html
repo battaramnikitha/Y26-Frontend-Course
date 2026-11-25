@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover restaurants and delicious food near you">
+    <title>Crave Corner | Food Discovery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: floralwhite;
+            color: saddlebrown;
+        }
+
+        /* Header using Flexbox */
+        header {
+            background-color: darkorange;
+            color: white;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: darkred;
+        }
+
+        /* Hero section */
+        .hero {
+            background-color: moccasin;
+            padding: 35px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: darkred;
+        }
+
+        .search-box {
+            width: 90%;
+            max-width: 450px;
+            padding: 12px;
+            border: 1px solid orange;
+            border-radius: 20px;
+        }
+
+        /* Categories using Flexbox */
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .category {
+            background-color: peachpuff;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Restaurant cards using CSS Grid */
+        .restaurant-section {
+            padding: 20px 5%;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid bisque;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: oldlace;
+        }
+
+        .food-icon {
+            font-size: 45px;
+            background-color: peachpuff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: darkred;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .rating {
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        .offer {
+            background-color: lightyellow;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: saddlebrown;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        /* Tablet layout */
+        @media (min-width: 600px) {
+            .restaurant-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop layout */
+        @media (min-width: 900px) {
+            .restaurant-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero {
+                padding: 50px;
+            }
+        }
+
+        /* Container query */
+        .restaurant-section {
+            container-type: inline-size;
+        }
+
+        @container (min-width: 700px) {
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🍴 Crave Corner</div>
+
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#restaurants">Restaurants</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <h1>Good Food, Great Mood!</h1>
+        <p>Discover tasty meals from your favourite restaurants.</p>
+
+        <input class="search-box" type="search"
+               placeholder="Search restaurants or food..."
+               aria-label="Search restaurants or food">
+    </section>
+
+    <section id="categories">
+        <h2 style="text-align:center;">Explore Categories</h2>
+
+        <div class="categories">
+            <div class="category">🍕 Pizza</div>
+            <div class="category">🍔 Burgers</div>
+            <div class="category">🍛 Indian</div>
+            <div class="category">🍜 Chinese</div>
+            <div class="category">🍰 Desserts</div>
+            <div class="category">🥗 Healthy</div>
+        </div>
+    </section>
+
+    <section class="restaurant-section" id="restaurants">
+        <h2>Popular Restaurants</h2>
+
+        <div class="restaurant-grid">
+
+            <article class="card">
+                <div class="food-icon">🍕</div>
+                <h3>Pizza Palace</h3>
+                <p>Cheesy pizzas and Italian flavours.</p>
+                <div class="details">
+                    <span class="rating">★ 4.5</span>
+                    <span>25-35 min</span>
+                </div>
+                <p class="offer">20% OFF on orders</p>
+            </article>
+
+            <article class="card">
+                <div class="food-icon">🍔</div>
+                <h3>Burger Barn</h3>
+                <p>Juicy burgers and crispy fries.</p>
+                <div class="details">
+                    <span class="rating">★ 4.3</span>
+                    <span>20-30 min</span>
+                </div>
+                <p class="offer">Free fries with burger</p>
+            </article>
+
+            <article class="card">
+                <div class="food-icon">🍛</div>
+                <h3>Spice Garden</h3>
+                <p>Traditional Indian meals and biryani.</p>
+                <div class="details">
+                    <span class="rating">★ 4.7</span>
+                    <span>30-40 min</span>
+                </div>
+                <p class="offer">Special lunch combos</p>
+            </article>
+
+            <article class="card">
+                <div class="food-icon">🍜</div>
+                <h3>Dragon Bowl</h3>
+                <p>Noodles, fried rice and Chinese dishes.</p>
+                <div class="details">
+                    <span class="rating">★ 4.2</span>
+                    <span>25-35 min</span>
+                </div>
+                <p class="offer">10% OFF today</p>
+            </article>
+
+            <article class="card">
+                <div class="food-icon">🍰</div>
+                <h3>Sweet Treats</h3>
+                <p>Cakes, pastries and delicious desserts.</p>
+                <div class="details">
+                    <span class="rating">★ 4.6</span>
+                    <span>15-25 min</span>
+                </div>
+                <p class="offer">Buy 2 get 1 free</p>
+            </article>
+
+            <article class="card">
+                <div class="food-icon">🥗</div>
+                <h3>Green Plate</h3>
+                <p>Fresh salads and healthy meals.</p>
+                <div class="details">
+                    <span class="rating">★ 4.4</span>
+                    <span>20-30 min</span>
+                </div>
+                <p class="offer">Healthy meal specials</p>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Crave Corner | Made for food lovers</p>
+</footer>
+
+</body>
+</html>
